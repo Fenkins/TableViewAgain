@@ -33,7 +33,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell_Id = "Cell_reusable_id"
         let cell = tableView.dequeueReusableCellWithIdentifier(cell_Id, forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = restaurantNames[indexPath.row]
-        cell.imageView?.image = UIImage(named: "restaurant")
+        let imageName = indexPath.row
+        cell.imageView?.image = UIImage(named: "\(imageName)")
         return cell
     }
 }
